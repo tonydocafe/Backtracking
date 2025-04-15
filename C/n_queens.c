@@ -32,7 +32,7 @@ bool nqueens(int table[N][N], int col){
     for (int i = 0; i < N; i++) {
         if (check_position(table, i, col)) {
             table[i][col] = 1;                       
-            recursion = nqueens(table, col + 1) || rescursion; 
+            recursion = nqueens(table, col + 1) || recursion; 
            table[i][col] = 0;                      
         }
      }
