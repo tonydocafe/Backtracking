@@ -23,19 +23,30 @@ bool check_position(int table[N][N], int row, int col) {
   for (int i = row, j = col; i < N && j >= 0; i++, j--) if (table[i][j]) return false;
 }
 
-bool nqueens(int table[N][N], int col)
+bool nqueens(int table[N][N], int col){
+    if (col >= N) {
+          solution(table);
+          return true;
+      }
+    
+    for (int i = 0; i < N; i++) {
+        if (check_position(table, i, col)) {
+            table[i][col] = 1;                       
+            recursion = nqueens(table, col + 1) || rescursion; 
+           table[i][col] = 0;                      
+        }
+     }
+}
 
-  if (col >= N) {
-      solution(table);
-      return true;
-  }
+int main() {
+    
+    int table[N][N] = {0};
 
- for (int i = 0; i < N; i++) {
-    if (check_position(table, i, col)) {
-        table[i][col] = 1;                       
-        recursion = nqueens(board, col + 1) || rescursion; 
-        table[i][col] = 0;                      
-    }
- }
+    if (!nqueens(table, 0))
+        printf("Nenhuma solução encontrada\n");
+    else
+        printf("Todas as soluções acima\n");
 
+    return 0;
+}
 
