@@ -21,6 +21,8 @@ bool check_position(int table[N][N], int row, int col) {
   for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) if (table[i][j]) return false;
 
   for (int i = row, j = col; i < N && j >= 0; i++, j--) if (table[i][j]) return false;
+
+    return true;
 }
 
 bool nqueens(int table[N][N], int col){
