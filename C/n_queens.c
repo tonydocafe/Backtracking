@@ -29,3 +29,13 @@ bool nqueens(int table[N][N], int col)
       solution(table);
       return true;
   }
+
+ for (int i = 0; i < N; i++) {
+    if (check_position(table, i, col)) {
+        table[i][col] = 1;                       
+        recursion = nqueens(board, col + 1) || rescursion; 
+        table[i][col] = 0;                      
+    }
+ }
+
+
