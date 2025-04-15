@@ -28,7 +28,9 @@ bool nqueens(int table[N][N], int col){
           solution(table);
           return true;
       }
+    
     bool recursion = false;
+    
     for (int i = 0; i < N; i++) {
         if (check_position(table, i, col)) {
             table[i][col] = 1;                       
@@ -36,6 +38,7 @@ bool nqueens(int table[N][N], int col){
            table[i][col] = 0;                      
         }
      }
+    
     return recursion;
 }
 
