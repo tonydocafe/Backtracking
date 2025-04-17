@@ -10,3 +10,5 @@ gcc n_queens.c -o n_queens
 ##### Python
 
  python nqueens.py
+
+##### Ruby
