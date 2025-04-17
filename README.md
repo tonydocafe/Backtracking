@@ -1,12 +1,12 @@
 excute :
 
 
-- C 
---
+##### C 
+
 
 gcc n_queens.c -o n_queens
 ./n_queens
 
-- Python
---
+##### Python
+
  python nqueens.py
