@@ -47,3 +47,11 @@ def nqueens(table, col)
 
   recursion
 end
+
+
+table = Array.new(N) { Array.new(N, 0) }
+if !nqueens(board, 0)
+  puts "Nenhuma solução encontrada"
+else
+  puts "Todas as soluções estão acima"
+end
