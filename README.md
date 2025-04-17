@@ -7,8 +7,11 @@ excute :
 gcc n_queens.c -o n_queens
 ./n_queens
 
+
 ##### Python
 
- python nqueens.py
+python nqueens.py
 
 ##### Ruby
+
+ruby nqueens.rb
