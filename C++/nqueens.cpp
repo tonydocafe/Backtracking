@@ -28,3 +28,22 @@ bool check_position(const vector<vector<int>>& table, int row, int col) {
 
     return true;
 }
+
+bool n_queens(vector<vector<int>>& board, int col) {
+    if (col >= N) {
+        solution(board);
+        return true;
+    }
+
+    bool recursion = false;
+    for (int i = 0; i < N; i++) {
+        if (check_position(table, i, col)) {
+            table[i][col] = 1;
+
+            recursion = n_queens(table, col + 1) || recursion;
+            table[i][col] = 0;
+        }
+    }
+
+    return recursion;
+}
