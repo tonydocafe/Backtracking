@@ -47,3 +47,13 @@ bool n_queens(vector<vector<int>>& board, int col) {
 
     return recursion;
 }
+int main() {
+    vector<vector<int>> table(N, vector<int>(N, 0));
+
+    if (!n_queens(table, 0))
+        cout << "Nenhuma solução encontrada" << endl;
+    else
+        cout << "Todas as soluções estão acima" << endl;
+
+    return 0;
+}
