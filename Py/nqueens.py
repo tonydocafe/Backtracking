@@ -24,4 +24,16 @@ def checkposition(table, row, col):
         j -= 1
 
     return True
+def n_queens(table, col):
+    if col >= N:
+        solution(board)
+        return True
 
+    recursion = False
+    for i in range(N):
+        if checkposition(board, i, col):
+            board[i][col] = 1
+            recursion = n_queens(board, col + 1) or rescursion
+            board[i][col] = 0  
+
+    return rescursion
