@@ -37,3 +37,13 @@ def n_queens(table, col):
             table[i][col] = 0  
 
     return rescursion
+
+def main():
+    table = [[0] * N for _ in range(N)]
+    if not n_queens(table, 0):
+        print("Nenhuma solução encontrada")
+    else:
+        print("Todas as soluções acima")
+
+if __name__ == "__main__":
+    main()
