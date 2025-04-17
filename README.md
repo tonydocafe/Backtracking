@@ -15,3 +15,10 @@ python nqueens.py
 ##### Ruby
 
 ruby nqueens.rb
+
+##### C++
+
+g++ -o nqueens nqueens.cpp
+
+./nqueens   
+
