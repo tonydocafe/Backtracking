@@ -30,3 +30,20 @@ def check_position(table, row, col)
 
   true
 end
+def nqueens(table, col)
+  if col >= N
+    solution(table)
+    return true
+  end
+
+  recursion = false
+  (0...N).each do |i|
+    if check_position(table, i, col)
+      table[i][col] = 1
+      recursion = nqueens(board, col + 1) || recursion
+      table[i][col] = 0  
+    end
+  end
+
+  recursion
+end
